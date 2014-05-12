@@ -1,11 +1,7 @@
 {
   "name": "component-loader",
-  "description" : "A web component to dynamicly load web components",
+  "description" : "A web component to dynamically load web components.",
   "dependencies": {
-    "polymer": "Polymer/polymer#master"
-  },
-  "resolutions": {
-    "polymer": "~0.2.0",
-    "platform": "~0.2.3"
+    "polymer": "Polymer/polymer#0.2.3"
   }
 }
