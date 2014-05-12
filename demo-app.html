@@ -1,0 +1,27 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="component-loader.html">
+
+<polymer-element name="demo-app">
+  <template>
+    <component-loader path="component-1.html" data="{{dataForComponent1}}"></component-loader>
+    <label>Load component-2.html</label><input type="checkbox" checked="{{loadComp2}}" />
+    <component-loader path="component-2.html" data="{{dataForComponent2}}" if="{{loadComp2}}"></component-loader>
+  </template>
+  <script>
+  Polymer('demo-app', {
+
+    dataForComponent1 : {
+      test : 'Hello World, Component 1'
+    },
+    dataForComponent2 : {
+      test : 'Hello World, Component 2'
+    },
+
+    loadComp2 : false,
+
+    shouldLoadChanged : function(){
+      console.log(this.shouldLoad);
+    }
+  });
+  </script>
+</polymer-element>
