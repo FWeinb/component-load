@@ -1,7 +1,14 @@
 {
   "name": "component-loader",
+  "author" : [
+    "Fabrice Weinberg <Fabrice@weinberg.me>"
+  ],
+  "keywords": [
+       "polymer",
+       "web-components"
+   ],
   "description" : "A web component to dynamically load web components.",
   "dependencies": {
-    "polymer": "Polymer/polymer#0.2.3"
+    "polymer": "Polymer/polymer#~0.2.3"
   }
 }
