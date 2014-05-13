@@ -1,20 +1,20 @@
 <link rel="import" href="../polymer/polymer.html">
 
 <!--
-component-loader is used to dynamicly load Web Components.
+component-load is used to dynamicly load Web Components.
 The attribute `path` is used to define the relative/absolute path to the web component that should be loaded
 To pass in data to the loaded web component you can use the `data` attribute. `data` is expecting a plain object.
 
 ##### Example
 
-    <component-loader path="component-1.html" data="{'attr':value'}" if="true" />
+    <component-load path="component-1.html" data="{'attr':value'}" if="true" />
 
-@class component-loader
+@class component-load
 @blurb A Polymer element for loading web components dynamicly.
 @status alpha
-@homepage https://github.com/FWeinb/component-loader
+@homepage https://github.com/FWeinb/component-load
 -->
-<polymer-element name="component-loader" attributes="path data if">
+<polymer-element name="component-load" attributes="path data if">
   <template>
     <style>
       :host{
@@ -46,7 +46,7 @@ To pass in data to the loaded web component you can use the `data` attribute. `d
     return filename.substring(0, filename.lastIndexOf('.'));
   };
 
-  Polymer('component-loader', {
+  Polymer('component-load', {
 
     observe : {
       'if'   : 'load',
@@ -56,7 +56,7 @@ To pass in data to the loaded web component you can use the `data` attribute. `d
     /**
      * This event is fired if the component was loaded successfully.
      * Event `.detail` will contain the name and the path of the loaded component.
-     * @event component-loader-loaded
+     * @event component-load-loaded
      */
 
 
@@ -129,7 +129,7 @@ To pass in data to the loaded web component you can use the `data` attribute. `d
 
           this.removeAttribute('unresolved');
 
-          this.fire('component-loader-loaded', { path : loadPath, name : name });
+          this.fire('component-load-loaded', { path : loadPath, name : name });
         }.bind(this));
 
       }

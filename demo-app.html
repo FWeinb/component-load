@@ -1,11 +1,11 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="component-loader.html">
+<link rel="import" href="component-load.html">
 
 <polymer-element name="demo-app">
   <template>
-    <component-loader path="component-1.html" data="{{dataForComponent1}}"></component-loader>
+    <component-load path="component-1.html" data="{{dataForComponent1}}"></component-load>
     <label>Load component-2.html</label><input type="checkbox" checked="{{loadComp2}}" />
-    <component-loader path="component-2.html" data="{{dataForComponent2}}" if="{{loadComp2}}"></component-loader>
+    <component-load path="component-2.html" data="{{dataForComponent2}}" if="{{loadComp2}}"></component-load>
   </template>
   <script>
   Polymer('demo-app', {
